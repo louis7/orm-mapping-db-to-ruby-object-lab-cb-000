@@ -90,9 +90,16 @@ def self.first_X_students_in_grade_10(number)
   end
 array
 
-
 end
 
+def self.first_students_in_grade_10
+  array = []
+  sql="SELECT * FROM students WHERE grade = 10;"
+  student_info = DB[:conn].execute(sql)
+  array << self.new_from_db(item)
+  first_student= array[0]
+  first_student
+end
 
 
 
