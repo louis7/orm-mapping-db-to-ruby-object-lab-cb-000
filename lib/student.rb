@@ -96,7 +96,7 @@ def self.first_student_in_grade_10
     self.first_X_students_in_grade_10(1)[0]
 end
 
-def all_students_in_grade_X(number)
+def self.all_students_in_grade_X(number)
   stored_number = number
   sql="SELECT * FROM students WHERE grade = '#{stored_number}';"
   student_info = DB[:conn].execute(sql)
